@@ -1,102 +1,90 @@
-# CTF Wiki
+# Senior Wiki
 
-[![Build Status](https://travis-ci.org/ctf-wiki/ctf-wiki.svg?branch=master)](https://travis-ci.org/ctf-wiki/ctf-wiki)
-[![Requirements Status](https://requires.io/github/ctf-wiki/ctf-wiki/requirements.svg?branch=master)](https://requires.io/github/ctf-wiki/ctf-wiki/requirements/?branch=master)
-[![Slack](https://img.shields.io/badge/slack-join%20chat-brightgreen.svg)](https://join.slack.com/t/ctf-wiki/shared_invite/enQtNTkwNDg5NDUzNzAzLWExOTRhZTE0ZTMzYjVlNDk5OGI3ZDA1NmQyZjE4NWRlMGU3NjEwM2Y2ZTliMTg4Njg1MjliNWRhNTk2ZmY0NmI)
+## 由来
 
-[中文](./README-zh_CN.md)  [English](./README.md)
+受到[CTF Wiki](https://wiki.x10sec.org/)的启发，作为一名~~热爱计算机技术的算法竞赛退役选手~~普通高中生，我萌生了将自己的学科笔记整理成Wiki形式便于查阅和长期保存的想法，并且希望能以这样的方式帮助到他人。
 
-Welcome to **CTF Wiki**！
+## Copyleft
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
 
-**CTF** (Capture The Flag) started from **DEFCON CTF**, a competitive game among computer security enthusiasts, originally hosted in 1996.
 
-**CTF** covers a wide range of fields. Along with the evolving security technology, the difficulty of **CTF** challenges is getting harder and harder. As a result, the learning curve for beginners is getting steeper. Most online information is scattered and trivial. Beginners often don't know how to systematically learn **CTF**, which requires a lot of work and effort.
 
-In order to let those people who are interested in **CTF**s start easily, in October 2016, **CTF Wiki** was establisged on Github. Along with gradually improved content over time, **CTF Wiki** has received lots of appreciation from security enthusiasts, many of those are guys that we think we would never meet.
+## Material color palette 颜色主题
 
-As a freedom site, primarily focusing on recent CTFs, **CTF Wiki** introduces the knowledge and techniques in all aspects of **CTF** to make it easier for beginners to learn **CTF**.
+### Primary colors 主色
 
-Now, **CTF Wiki** mainly contains the basic skill-set for **CTF**, but we are working hard to improve the following contents.
+> 默认 `white`
 
-- Advanced skills used in CTF
-- Special topics appearing in CTF
+点击色块可更换主题的主色
 
-For the above-mentioned parts to be improved, please refer to [Projects](https://github.com/ctf-wiki/ctf-wiki/projects) which details what are planned.
+<button data-md-color-primary="red">Red</button>
+<button data-md-color-primary="pink">Pink</button>
+<button data-md-color-primary="purple">Purple</button>
+<button data-md-color-primary="deep-purple">Deep Purple</button>
+<button data-md-color-primary="indigo">Indigo</button>
+<button data-md-color-primary="blue">Blue</button>
+<button data-md-color-primary="light-blue">Light Blue</button>
+<button data-md-color-primary="cyan">Cyan</button>
+<button data-md-color-primary="teal">Teal</button>
+<button data-md-color-primary="green">Green</button>
+<button data-md-color-primary="light-green">Light Green</button>
+<button data-md-color-primary="lime">Lime</button>
+<button data-md-color-primary="yellow">Yellow</button>
+<button data-md-color-primary="amber">Amber</button>
+<button data-md-color-primary="orange">Orange</button>
+<button data-md-color-primary="deep-orange">Deep Orange</button>
+<button data-md-color-primary="brown">Brown</button>
+<button data-md-color-primary="grey">Grey</button>
+<button data-md-color-primary="blue-grey">Blue Grey</button>
+<button data-md-color-primary="white">White</button>
 
-Although now **CTF Wiki** mainly focus **CTF**, it is not strictly limited to **CTF** topics. In the future, **CTF Wiki** will include
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-primary]");
+  Array.prototype.forEach.call(buttons, function(button) {
+    button.addEventListener("click", function() {
+      document.body.dataset.mdColorPrimary = this.dataset.mdColorPrimary;
+      localStorage.setItem("data-md-color-primary",this.dataset.mdColorPrimary);
+    })
+  })
+</script>
 
-- Tools used in security research
-- Increased discussion of security in the world
+### Accent colors 辅助色
 
-In addition, given the following two points
+> 默认 `red`
 
-- Information about technology should be openly shared.
-- As new techniques are always being developed, old techniques will start to fade over time and they should be replaced with new techniques.
+点击色块更换主题的辅助色
 
-Therefore, **CTF Wiki** will never publish books.
+<button data-md-color-accent="red">Red</button>
+<button data-md-color-accent="pink">Pink</button>
+<button data-md-color-accent="purple">Purple</button>
+<button data-md-color-accent="deep-purple">Deep Purple</button>
+<button data-md-color-accent="indigo">Indigo</button>
+<button data-md-color-accent="blue">Blue</button>
+<button data-md-color-accent="light-blue">Light Blue</button>
+<button data-md-color-accent="cyan">Cyan</button>
+<button data-md-color-accent="teal">Teal</button>
+<button data-md-color-accent="green">Green</button>
+<button data-md-color-accent="light-green">Light Green</button>
+<button data-md-color-accent="lime">Lime</button>
+<button data-md-color-accent="yellow">Yellow</button>
+<button data-md-color-accent="amber">Amber</button>
+<button data-md-color-accent="orange">Orange</button>
+<button data-md-color-accent="deep-orange">Deep Orange</button>
 
-Finally, originating from the community, as an independent organization, **CTF Wiki** advocates **freedom of knowledge**, will **never be commercialized**, and will always maintain the character of **independence and freedom**.
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-accent]");
+  Array.prototype.forEach.call(buttons, function(button) {
+    button.addEventListener("click", function() {
+      document.body.dataset.mdColorAccent = this.dataset.mdColorAccent;
+      localStorage.setItem("data-md-color-accent",this.dataset.mdColorAccent);
+    })
+  })
+</script>
 
-## How to build？
+## 致谢
 
-CTF Wiki uses [mkdocs](https://github.com/mkdocs/mkdocs) to show its contents. And it is deployed at [https://ctf-wiki.github.io/ctf-wiki/](https://ctf-wiki.github.io/ctf-wiki/).
+我站在巨人的肩膀上——大量沿用了`CTF Wiki`的`mkdocs`配置，并打算采用相似的工作模式。
 
-It can also be deployed locally, with the following steps:
+在此表示由衷的感谢！
 
-```shell
-# 1. clone
-git clone https://github.com/ctf-wiki/ctf-wiki.git
-# 2. requirements
-pip install -r requirements.txt
-# generate static file in site/
-mkdocs build
-# deploy at http://127.0.0.1:8000
-mkdocs serve
-```
-
-** A local instance of mkdocs is dynamically updated, for instance when a markdown file is modified, the corresponding page will be modified too.**
-
-If you just want to view it statically, try Docker!
-
-```
-docker run -d --name=ctf-wiki -p 4100:80 ctfwiki/ctf-wiki
-```
-And then access [http://localhost:4100/](http://localhost:4100/) .
-
-## How to practice？
-
-Firstly, learn some basic security knowledge through online reading.
-
-Secondly, CTF Wiki has two sister projects.
-
-- All of the challenges that are mentioned are in the [ctf-challenges](https://github.com/ctf-wiki/ctf-challenges) repository, you can locate them with their corresponding category.
-  - Note: There are still some topics that are still being migrated. . . (misc, web)
-- The tools mentioned in the CTF Wiki are constantly added to the [ctf-tools](https://github.com/ctf-wiki/ctf-tools) repository.
-
-## How to make CTF Wiki Better？
-
-We welcome to write content for the wiki and share what you have learned. 
-
-**Before you decide to contribute content, please read [CONTRIBUTING](https://github.com/ctf-wiki/ctf-wiki/wiki/Contributing-Guide)**.
-
-Thank you to all the people who have already contributed to CTF Wiki.
-
-<a href="https://github.com/ctf-wiki/ctf-wiki/graphs/contributors"><img src="https://opencollective.com/ctf-wiki/contributors.svg?width=890&button=false" />
-
-## What can you get?
-
-- Ability to learn new things quickly
-- Different ways of thinking
-- A love for solving problems
-- Interesting security techniques
-- Memorable and enriching experience
-
-Before reading the Wiki, we hope to give you some advice:
-
-- Learn to ask [smart-questions](http://www.catb.org/~esr/faqs/smart-questions.html) .
-- Learn to use Google Search for self-improvement.
-- Be good at least one programming language, such as Python.
-- Practice is the most important learning tool.
-- Maintain the passions and desire to learn about new techniques.
-
-The security circle is small and the areas of exploration is vast. Let's get started with **CTF Wiki**!
+另外，如果我的行为侵犯了您的权益，立即联系我，以便妥善处理。
