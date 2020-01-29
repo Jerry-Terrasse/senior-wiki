@@ -20,7 +20,7 @@ site_dir: docs
 nav:
   - 简介: index.md
   - 化学:
-    - 化学能与电能: chemistry/First.md
+    - 化学实验基本方法: chemistry/exp-mtd.md
 
 # Theme
 theme:
